@@ -1,12 +1,14 @@
 let untyped = '';
 let typed = '';
 let score = 0;
+let trueCount = 0;
 
 const untypedfield = document.getElementById('untyped');
 const typedfield = document.getElementById('typed');
 const wrap = document.getElementById('wrap');
 const start = document.getElementById('start');
 const count = document.getElementById('count');
+const truecount = document.getElementById('truecount');
 
 
 
@@ -46,6 +48,8 @@ const keyPress = e => {
   }
   
   score++;
+  trueCount++;
+  truecount.textContent = `${trueCount}`;
   typed += untyped.substring(0,1);
   untyped = untyped.substring(1);
   typedfield.textContent = typed

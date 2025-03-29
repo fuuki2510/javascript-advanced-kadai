@@ -78,14 +78,14 @@ const gameOver = id => {
 
   untypedfield.textContent = 'タイムアップ！';
   typedfield.textContent = '';
-  
+
   setTimeout(() => {
     const result = confirm(rankCheck(score));
 
     if (result == true) {
       window.location.reload();
     }
-  }, 1000);
+  }, 10);
 };
 
 const timer = () => {

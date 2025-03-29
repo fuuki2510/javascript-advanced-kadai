@@ -70,12 +70,12 @@ const rankCheck = score => {
     text = `あなたのランクはSです。\nおめでとうございます！`;
   }
 
-  return `${score}文字打てました。\n${text}\n【ok】リトライ　/ 【キャンセル】終了`;
+  return `${score}文字打てました！\n${text}\n【ok】リトライ/ 【キャンセル】終了`;
 };
 
 const gameOver = id => {
   clearInterval(id);
-  const result = confirm = (rankCheck(score));
+  const result = confirm(rankCheck(score));
   if(result == true) {
     window.location.reload();
   }
